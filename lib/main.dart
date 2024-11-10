@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My App'),
+        title: const Text('Coctel DB - Grupo 1'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
