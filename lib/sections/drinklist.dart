@@ -1,3 +1,4 @@
+import 'package:cocteles/sections/drinkdetails.dart';
 import 'package:flutter/material.dart';
 import '../models/drink.dart';
 import '../services/api_service.dart';
@@ -39,6 +40,11 @@ class _DrinkListState extends State<DrinkList> {
               itemBuilder: (context, index) {
                 final drink = snapshot.data![index];
                 return ListTile(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>DrinkDetails(
+                      image: drink.strDrinkThumb,
+                      text: drink.strDrink)));
+                  },
                   leading: Image.network(drink.strDrinkThumb),
                   title: Text(drink.strDrink),
                 );
