@@ -40,9 +40,9 @@ class _SearchState extends State<Search> {
                 controller: _controller,
                 decoration: InputDecoration(
                   labelText: 'Buscar por nombre',
-                  labelStyle: TextStyle(color: Colors.white),
+                  labelStyle: TextStyle(color: Colors.black),
                   filled: true,
-                  fillColor: Colors.white.withOpacity(0.8), 
+                  fillColor: Colors.grey.withOpacity(0.3),
                   suffixIcon: IconButton(
                     icon: const Icon(Icons.search, color: Colors.black),
                     onPressed: _searchDrinks,
