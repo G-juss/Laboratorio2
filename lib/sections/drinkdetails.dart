@@ -11,7 +11,7 @@ class DrinkDetails extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 28*2,),
+            const SizedBox(height: 10*2,),
             Padding(padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: [
