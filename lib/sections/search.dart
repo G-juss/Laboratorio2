@@ -26,16 +26,13 @@ class _SearchState extends State<Search> {
         title: const Text('¡Busca tu coctel!'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             TextField(
               controller: _controller,
               decoration: InputDecoration(
                 labelText: 'Buscar por nombre',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
                 suffixIcon: IconButton(
                   icon: const Icon(Icons.search),
                   onPressed: _searchDrinks,
@@ -45,11 +42,7 @@ class _SearchState extends State<Search> {
             ),
             const SizedBox(height: 20),
             _futureDrinks == null
-                ? const Text(
-                    'Encuentra tu bebida favorita en el mejor catálogo más completo',
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.center,
-                  )
+                ? const Text('Encuentra tu bebida favorita en el mejor catálogo más completo')
                 : FutureBuilder<List<Drink>>(
                     future: _futureDrinks,
                     builder: (context, snapshot) {
@@ -65,23 +58,9 @@ class _SearchState extends State<Search> {
                             itemCount: snapshot.data!.length,
                             itemBuilder: (context, index) {
                               final drink = snapshot.data![index];
-                              return Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                ),
-                                margin: const EdgeInsets.symmetric(vertical: 8.0),
-                                child: ListTile(
-                                  leading: ClipRRect(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    child: Image.network(
-                                      drink.strDrinkThumb,
-                                      width: 50,
-                                      height: 50,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  title: Text(drink.strDrink),
-                                ),
+                              return ListTile(
+                                leading: Image.network(drink.strDrinkThumb),
+                                title: Text(drink.strDrink),
                               );
                             },
                           ),
