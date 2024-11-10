@@ -1,5 +1,5 @@
+import 'package:cocteles/sections/home.dart';
 import 'package:flutter/material.dart';
-import 'sections/drinkdetails.dart';
 import 'sections/drinklist.dart';
 import 'sections/search.dart';
 
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    DrinkDetails(),
+    Home(),
     DrinkList(),
     Search(),
   ];
