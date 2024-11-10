@@ -28,7 +28,7 @@ class _SearchState extends State<Search> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/cocteles.jpg'),
+            image: AssetImage('lib/assets/cocteles.jpg'),
             fit: BoxFit.cover,
           ),
         ),
